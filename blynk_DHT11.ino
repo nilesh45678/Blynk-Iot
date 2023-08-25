@@ -1,7 +1,9 @@
+//create by nilesh45678
 
-#define BLYNK_TEMPLATE_ID           "TMPL3AUoKa4eH"
-#define BLYNK_TEMPLATE_NAME         "Quickstart Template"
-#define BLYNK_AUTH_TOKEN            "3GHZR1W5WSMihiRafEdj7tDYjp0x1iGN"
+//Replace with your blynk cred
+#define BLYNK_TEMPLATE_ID           "Replace"
+#define BLYNK_TEMPLATE_NAME         "Replace"
+#define BLYNK_AUTH_TOKEN            "Replace"
 
 /* Comment this out to disable prints and save space */
 #define BLYNK_PRINT Serial
@@ -11,11 +13,12 @@
 #include <BlynkSimpleEsp8266.h>
 #include <DHT.h>
 
-char ssid[] = "AdityaS";
-char pass[] = "Nilesh@123";
+// Replace with your wifi ssid and Password...
+char ssid[] = "Replace";
+char pass[] = "Replace";
 
-#define DHTPIN 2          // What digital pin we're connected to
-#define DHTTYPE DHT11     // DHT 11
+#define DHTPIN 2          // connect to D4 pin
+#define DHTTYPE DHT11
 
 DHT dht(DHTPIN, DHTTYPE);
 BlynkTimer timer;
@@ -30,7 +33,8 @@ void sendSensor()
     Serial.println("Failed to read from DHT sensor!");
     return;
   }
-  Blynk.virtualWrite(V1, h);
+  //Check your virtual pins 
+  Blynk.virtualWrite(V1, h);   
   Blynk.virtualWrite(V0, t);
 }
 
@@ -41,7 +45,7 @@ void setup()
   Blynk.begin(BLYNK_AUTH_TOKEN, ssid, pass);
   dht.begin();
 
-  // Setup a function to be called every second
+  //This function is to be called every second
   timer.setInterval(1000L, sendSensor);
 }
 
