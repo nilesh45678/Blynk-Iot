@@ -1,9 +1,9 @@
 //Create by nilesh45678
 //version 2.0
 
-#define BLYNK_TEMPLATE_ID "TMPL3S3O3iG4h"
-#define BLYNK_TEMPLATE_NAME "Home Automation"
-#define BLYNK_AUTH_TOKEN "W9MhzsF86_m0JemhssoXmA4pw437U2O_"
+#define BLYNK_TEMPLATE_ID "============"
+#define BLYNK_TEMPLATE_NAME "=============="
+#define BLYNK_AUTH_TOKEN "=================="
 
 /* Comment this out to disable prints and save space */
 #define BLYNK_PRINT Serial
